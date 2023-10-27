@@ -25,7 +25,6 @@ data class UserGroup(
             return groupList
         }
 
-
     }
 }
 
