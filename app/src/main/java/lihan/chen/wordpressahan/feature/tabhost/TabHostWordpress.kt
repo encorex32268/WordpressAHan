@@ -67,7 +67,13 @@ fun TabHostWordpress() {
         tabWidthStateList
     }
     val density = LocalDensity.current
-    val pagerState = rememberPagerState(initialPage = 0)
+    val pagerState = rememberPagerState(
+        initialPage = 0,
+        initialPageOffsetFraction = 0f,
+        pageCount = {
+            tabs.size
+        }
+    )
     val scope = rememberCoroutineScope()
     Column(
         modifier = Modifier.fillMaxSize()
@@ -114,12 +120,12 @@ fun TabHostWordpress() {
                 }
             }
         )
-        HorizontalPager(pageCount = tabs.size , state = pagerState) {
+        HorizontalPager(state = pagerState) { PAGE ->
             Box(
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center
             ){
-                Text(text = "Page ${it + 1}", fontSize = 24.sp)
+                Text(text = "Page ${PAGE + 1}", fontSize = 24.sp)
             }
 
         }

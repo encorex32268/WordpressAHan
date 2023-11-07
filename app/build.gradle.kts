@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "lihan.chen.wordpressahan"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "lihan.chen.wordpressahan"
@@ -70,4 +70,6 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation("com.google.code.gson:gson:2.10.1")
 
+    //coil
+    implementation("io.coil-kt:coil-compose:2.5.0")
 }

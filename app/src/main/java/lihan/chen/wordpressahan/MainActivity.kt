@@ -18,6 +18,7 @@ import lihan.chen.wordpressahan.feature.expandablelist.ExpandableList
 import lihan.chen.wordpressahan.feature.expandablelist.ExpandableViewModel
 import lihan.chen.wordpressahan.feature.expandablelist.User
 import lihan.chen.wordpressahan.feature.expandablelist.UserGroup
+import lihan.chen.wordpressahan.feature.imagepicker.ImagePicker
 import lihan.chen.wordpressahan.feature.norippleclick.NoRippleClick
 import lihan.chen.wordpressahan.feature.tabhost.TabHostWordpress
 import lihan.chen.wordpressahan.ui.theme.WordpressAHanTheme
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             WordpressAHanTheme {
-                TabHostWordpress()
+                ImagePicker()
             }
         }
     }
